@@ -16,6 +16,7 @@ Mainly from this: https://selfhostedhome.com/diy-bed-presence-detection-home-ass
 * USB to microUSB cable.
 
 ## Software
+* [CP210X Drivers](https://www.silabs.com/products/development-tools/software/interface). I used the OSX version. This is needed for communication with the ESP8266 via USB.
 * [Atom](https://atom.io/) - Optinal.
 * [PlatformIO Addon](https://platformio.org/). If no Atom, you need some other way of using this.
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software).
