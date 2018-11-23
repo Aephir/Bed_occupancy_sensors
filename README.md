@@ -41,10 +41,7 @@ With the software listed already installed:
    * WiFi SSID within the quotes (").
    * WiFi password within the quotes (").
    * MQTT server (IP address; I use my local IP, since this is all running within my LAN). Should I include the port??
-3. Open PlatformIO in Atom, add your project
-   * Choose `Espressif ESP8266 ESP-12E` board.
-   * Choose `???` framework.
-   * Choose location.
+3. Open PlatformIO in Atom.
 4. Open PlatformIO terminal.
    * In Atom, choose the menu `Packages > platformio-ide > New Terminal`.
    * `cd` to the directory where you have cloned [this repo](https://github.com/selfhostedhome/smart-bed-sensor).
@@ -52,6 +49,7 @@ With the software listed already installed:
    ```bash
    platformio run --target upload
    ```
+OBS! I cannot find the ESP8266 in the serial monitor. So cannot upload...? How to fix??
 
 ## Home Assistant
 
