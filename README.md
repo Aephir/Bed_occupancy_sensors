@@ -28,6 +28,10 @@ Mainly from this: https://selfhostedhome.com/diy-bed-presence-detection-home-ass
 ### Assembly
 Assmeble the six parts as shown below. Do it however you want for testing, but make sure the wires are long enough that you can fit one under each leg of the bed when you get ready to actually deploy.
 
+1. The HX711 and ESP8266 are connected by four wires (VCC, GND and 2x data)
+2. The four load cells are connected in serial, black wire to black wire and white wire to white wire.
+3. Each of the four load cells are connected to the HX711 via their red wire.
+
 ![Connections](https://github.com/Aephir/Bed_occupancy_sensors/blob/master/Connections.svg)
 
 
