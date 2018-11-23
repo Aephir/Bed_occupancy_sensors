@@ -19,8 +19,6 @@ Mainly from this: https://selfhostedhome.com/diy-bed-presence-detection-home-ass
 * [Atom](https://atom.io/) - Optinal.
 * [PlatformIO Addon](https://platformio.org/). If no Atom, you need some other way of using this.
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software).
-
-## Other
 * MQTT broker*.
 
 ## Guide
@@ -54,6 +52,34 @@ With the software listed already installed:
    ```bash
    platformio run --target upload
    ```
+
+## Home Assistant
+
+I am using this in Home Assistant, though it could be used in a plethora of ways. See my Home Assistant repository for more info, but basically I set up an MQTT sensor in my `sensors.yaml` to get the data (which is raw data, not converted to weight):
+
+```yaml
+- platform: mqtt
+  state_topic: 'home/bedroom/bed'
+  name: "Raw Master Bed Weight Measurement"
+  ```
+And a template sensor (also in `sensors.yaml`) to determine who is in bed. This is just based on cutoff values for different weights.
+
+```yaml
+- platform: template
+  sensors:
+    person_1_in_bed:
+      friendly_name: "Person 1 in Bed"
+      value_template: >
+        {{ states('sensor.raw_master_bed_weight_measurement')|float >= XXXXXX }}
+    person_2_in_bed:
+      friendly_name: "Person 2 in Bed"
+      value_template: >
+        {{ states('sensor.raw_master_bed_weight_measurement')|float > XXXXXX
+          and (states('sensor.raw_master_bed_weight_measurement')|float < XXXXXX
+               or states('sensor.raw_master_bed_weight_measurement')|float >= XXXXXX)}}
+```
+
+
 ___
 
 
