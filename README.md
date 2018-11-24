@@ -18,7 +18,8 @@ Mainly from this: https://selfhostedhome.com/diy-bed-presence-detection-home-ass
 ## Software
 * Drivers for ESP8266 ESP-12E Node MCU.
     * These are the official, **but they don't seem to work!** something about the OSX versions not being signed properly, so blah blah blah... [CP210X Drivers](https://www.silabs.com/products/development-tools/software/interface).
-    * I found info [here](http://rossbates.com/2016/01/30/getting-started-esp8266-osx/) that link to [this driver](https://s3.amazonaws.com/rbat.es/codebenderDriver.zip) that actually worked. 
+    * I found info [here](http://rossbates.com/2016/01/30/getting-started-esp8266-osx/) that link to [this driver](https://s3.amazonaws.com/rbat.es/codebenderDriver.zip). No luck either.
+    * According to [this article](https://www.14core.com/installing-nodemcu-driver-on-mac/), I should install the CH340 drivers [from here](https://www.14core.com/drivers/).
 * [Atom](https://atom.io/) - Optinal.
 * [PlatformIO Addon](https://platformio.org/). If no Atom, you need some other way of using this.
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software).
