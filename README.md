@@ -81,6 +81,16 @@ And a template sensor (also in `sensors.yaml`) to determine who is in bed. This 
                or states('sensor.raw_master_bed_weight_measurement')|float >= XXXXXX)}}
 ```
 
+## Troubleshooting
+I have issues getting the ESP8266 to show up in serial ports. [See here](https://www.quora.com/How-do-I-uninstall-different-Mac-OS-drivers-that-I-dont-need) for install locations of drivers.
+I've installed:
+* [CP210X USB to UART Bridge VCP Drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+   * /Library/Extensions/SiLabsUSBDriver.kext
+* []()
+   * /Library/Extensions/SiLabsUSBDriver.kext
+* [CH340 Drivers](https://www.14core.com/drivers/):
+   * /Library/Extensions/XXXX???
+* []()
 
 ___
 
