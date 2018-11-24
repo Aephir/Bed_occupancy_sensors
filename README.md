@@ -16,7 +16,9 @@ Mainly from this: https://selfhostedhome.com/diy-bed-presence-detection-home-ass
 * USB to microUSB cable.
 
 ## Software
-* [CP210X Drivers](https://www.silabs.com/products/development-tools/software/interface). I used the OSX version. This is needed for communication with the ESP8266 via USB.
+* Drivers for ESP8266 ESP-12E Node MCU.
+    * These are the official, **but they don't seem to work!** something about the OSX versions not being signed properly, so blah blah blah... [CP210X Drivers](https://www.silabs.com/products/development-tools/software/interface).
+    * I found info [here](http://rossbates.com/2016/01/30/getting-started-esp8266-osx/) that link to [this driver](https://s3.amazonaws.com/rbat.es/codebenderDriver.zip) that actually worked. 
 * [Atom](https://atom.io/) - Optinal.
 * [PlatformIO Addon](https://platformio.org/). If no Atom, you need some other way of using this.
 * [Arduino IDE](https://www.arduino.cc/en/Main/Software).
